@@ -45,6 +45,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .nav-links a:hover{color:var(--pink)}
 .nav-cta{background:var(--pink);color:#fff;padding:10px 22px;border-radius:30px;font-size:14px;font-weight:600;text-decoration:none;transition:opacity 0.2s}
 .nav-cta:hover{opacity:0.88}
+.store-badges{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.store-badges img{height:34px;width:auto;display:block}
+.store-badges a{display:flex;line-height:0}
+.mobile-badges{display:flex;align-items:center;gap:10px;margin-top:4px}
+.mobile-badges img{height:38px;width:auto;display:block}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .hamburger span{width:24px;height:2px;background:var(--dark);border-radius:2px;transition:all 0.3s}
 .mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:#fff;border-bottom:1px solid #f5e0e8;padding:20px 5%;z-index:99;flex-direction:column;gap:16px}
@@ -194,6 +199,14 @@ footer{background:var(--dark);color:rgba(255,255,255,0.5);padding:40px 5%;text-a
 .reveal.visible{opacity:1;transform:translateY(0)}
 
 /* RESPONSIVE */
+/* Store badges share nav-inner with the links+CTA, which are already a
+   tight fit right above the 900px hamburger breakpoint — hide the inline
+   badges a bit earlier (1100px) rather than risk them overflowing/clipping
+   the nav on tablet-ish widths. They're always reachable instead via the
+   mobile menu dropdown at <=900px (see .mobile-badges below). */
+@media(max-width:1100px){
+  .store-badges{display:none}
+}
 @media(max-width:900px){
   .hero-inner,.contact-grid{grid-template-columns:1fr}
   .hero-img-wrap{order:-1}
@@ -227,6 +240,14 @@ footer{background:var(--dark);color:rgba(255,255,255,0.5);padding:40px 5%;text-a
       <li><a href="#contact">Contact</a></li>
     </ul>
     <a href="https://wa.me/919866238365" class="nav-cta">Book Consultation</a>
+    <div class="store-badges">
+      <a href="https://apps.apple.com/in/app/sk-nutricare/id6808972761" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
+        <img src="assets/app-store-badge.svg" alt="Download on the App Store">
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.sknutricare.app" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
+        <img src="assets/google-play-badge.png" alt="Get it on Google Play">
+      </a>
+    </div>
     <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -239,6 +260,14 @@ footer{background:var(--dark);color:rgba(255,255,255,0.5);padding:40px 5%;text-a
   <a href="#testimonials" onclick="toggleMenu()">Stories</a>
   <a href="#contact" onclick="toggleMenu()">Contact</a>
   <a href="https://wa.me/919866238365" style="color:var(--pink);font-weight:700;">Book Consultation</a>
+  <div class="mobile-badges">
+    <a href="https://apps.apple.com/in/app/sk-nutricare/id6808972761" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
+      <img src="assets/app-store-badge.svg" alt="Download on the App Store">
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=com.sknutricare.app" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
+      <img src="assets/google-play-badge.png" alt="Get it on Google Play">
+    </a>
+  </div>
 </div>
 
 <!-- HERO -->
