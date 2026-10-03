@@ -45,11 +45,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .nav-links a:hover{color:var(--pink)}
 .nav-cta{background:var(--pink);color:#fff;padding:10px 22px;border-radius:30px;font-size:14px;font-weight:600;text-decoration:none;transition:opacity 0.2s}
 .nav-cta:hover{opacity:0.88}
-.store-badges{display:flex;align-items:center;gap:8px;flex-shrink:0}
-.store-badges img{height:34px;width:auto;display:block}
-.store-badges a{display:flex;line-height:0}
-.mobile-badges{display:flex;align-items:center;gap:10px;margin-top:4px}
-.mobile-badges img{height:38px;width:auto;display:block}
+.store-badges{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.store-badges img{height:44px;width:auto;display:block}
+.store-badges a{display:flex;align-items:center;line-height:0}
+.mobile-badges{display:flex;align-items:center;gap:12px;margin-top:4px}
+.mobile-badges img{height:48px;width:auto;display:block}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .hamburger span{width:24px;height:2px;background:var(--dark);border-radius:2px;transition:all 0.3s}
 .mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:#fff;border-bottom:1px solid #f5e0e8;padding:20px 5%;z-index:99;flex-direction:column;gap:16px}
@@ -158,7 +158,9 @@ section{padding:90px 5%}
 .download h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,46px);color:#fff;margin-bottom:14px}
 .download p{color:rgba(255,255,255,0.8);font-size:17px;margin-bottom:36px;max-width:480px;margin-left:auto;margin-right:auto}
 .download-btns{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
-.play-btn-disabled{background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.6);border:2px solid rgba(255,255,255,0.25);padding:14px 32px;border-radius:50px;font-size:15px;font-weight:600;cursor:not-allowed;display:inline-flex;align-items:center;gap:10px}
+.download-badges{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+.download-badges img{height:52px;width:auto;display:block;transition:transform 0.2s}
+.download-badges a:hover img{transform:translateY(-2px)}
 .whatsapp-btn{background:#25D366;color:#fff;padding:14px 32px;border-radius:50px;font-size:15px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:all 0.25s}
 .whatsapp-btn:hover{opacity:0.9;transform:translateY(-2px)}
 
@@ -461,9 +463,16 @@ footer{background:var(--dark);color:rgba(255,255,255,0.5);padding:40px 5%;text-a
 <!-- DOWNLOAD -->
 <section class="download" id="download">
   <h2>Your Health Journey Starts <em style="font-style:italic">Today</em></h2>
-  <p>The SK Nutricare™ app is coming soon to Android. In the meantime, book a consultation directly with Dt. Swetha.</p>
+  <p>The SK Nutricare™ app is live on the App Store and Google Play. Download it now, or book a consultation directly with Dt. Swetha.</p>
   <div class="download-btns">
-    <div class="play-btn-disabled">▶ Play Store — Coming Soon</div>
+    <div class="download-badges">
+      <a href="https://apps.apple.com/in/app/sk-nutricare/id6808972761" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
+        <img src="assets/app-store-badge.svg" alt="Download on the App Store">
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.sknutricare.app" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
+        <img src="assets/google-play-badge.png" alt="Get it on Google Play">
+      </a>
+    </div>
     <a href="https://wa.me/919866238365" class="whatsapp-btn">&#128172; WhatsApp Us Now</a>
   </div>
 </section>
